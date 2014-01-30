@@ -1,0 +1,1 @@
+pod "ASCScreenBrightnessDetector", :path => "../ASCScreenBrightnessDetector.podspec"

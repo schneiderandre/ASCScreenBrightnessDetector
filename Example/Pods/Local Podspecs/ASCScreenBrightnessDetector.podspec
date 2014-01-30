@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "ASCScreenBrightnessDetector"
   s.version      = "0.1.0"
-  s.summary      = "Easily detects screen brightness changes and provides some useful delegate methods."
+  s.summary      = "Easily detects screen brightness changes and provides some useful delegate callbacks."
   s.homepage     = "https://github.com/schneiderandre/ASCScreenBrightnessDetector"
   s.screenshots  = [ "https://dl.dropboxusercontent.com/u/19150300/Github/ASCScreenBrightnessDetector/dark.png",
                      "https://dl.dropboxusercontent.com/u/19150300/Github/ASCScreenBrightnessDetector/light.png" ]

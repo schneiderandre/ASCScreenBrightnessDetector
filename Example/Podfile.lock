@@ -1,0 +1,14 @@
+PODS:
+  - ASCScreenBrightnessDetector (0.1.0)
+
+DEPENDENCIES:
+  - ASCScreenBrightnessDetector (from `../ASCScreenBrightnessDetector.podspec`)
+
+EXTERNAL SOURCES:
+  ASCScreenBrightnessDetector:
+    :path: ../ASCScreenBrightnessDetector.podspec
+
+SPEC CHECKSUMS:
+  ASCScreenBrightnessDetector: c78798fc098914c282a2b73388743809dcdfe91e
+
+COCOAPODS: 0.29.0
