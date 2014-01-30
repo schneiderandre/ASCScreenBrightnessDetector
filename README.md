@@ -47,7 +47,7 @@ To continuously detect screen brightness changes implement ASCScreenBrightnessDe
 ```objective-c
 - (void)screenBrightnessDidChange:(CGFloat)brightness
 {
-    NSLog(@"The new brightness is: %@", brightness);
+    NSLog(@"The new brightness is: %f", brightness);
 }
 
 - (void)screenBrightnessStyleDidChange:(ASCScreenBrightnessStyle)style
