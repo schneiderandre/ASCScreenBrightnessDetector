@@ -13,6 +13,8 @@ For Example it's very easy to switch between a day and night theme optimized for
 
 This repository contains an example project that uses the methods provided by ASCScreenBrightnessDetector - just build and run to see it in action.
 
+**Please note:** The screen brightness detection will only work on a real device, the Xcode Simulators screen brightness is always 0.5.
+
 Wherever you want to use ASCScreenBrightnessDetector, import the header file as follows:
 
 ``` objective-c
