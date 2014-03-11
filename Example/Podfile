@@ -1,1 +1,8 @@
+platform :ios, "7.0"
+
 pod "ASCScreenBrightnessDetector", :path => "../ASCScreenBrightnessDetector.podspec"
+
+target "ASCScreenBrightnessDetectorExampleTests" do
+	pod 'Specta'
+	pod 'Expecta'
+end

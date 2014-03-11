@@ -1,14 +1,20 @@
 PODS:
   - ASCScreenBrightnessDetector (0.1.0)
+  - Expecta (0.2.4)
+  - Specta (0.2.1)
 
 DEPENDENCIES:
   - ASCScreenBrightnessDetector (from `../ASCScreenBrightnessDetector.podspec`)
+  - Expecta
+  - Specta
 
 EXTERNAL SOURCES:
   ASCScreenBrightnessDetector:
     :path: ../ASCScreenBrightnessDetector.podspec
 
 SPEC CHECKSUMS:
-  ASCScreenBrightnessDetector: c78798fc098914c282a2b73388743809dcdfe91e
+  ASCScreenBrightnessDetector: bc9e056b2960dc755a436a7e885d1e18360cf507
+  Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
+  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
 
 COCOAPODS: 0.29.0
