@@ -1,6 +1,6 @@
 PODS:
   - ASCScreenBrightnessDetector (0.1.0)
-  - Expecta (0.2.4)
+  - Expecta (0.3.0)
   - Specta (0.2.1)
 
 DEPENDENCIES:
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ASCScreenBrightnessDetector: bc9e056b2960dc755a436a7e885d1e18360cf507
-  Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
+  Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
   Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
 
 COCOAPODS: 0.29.0
