@@ -1,3 +1,2 @@
 language: objective-c
-xcode_workspace: Example/ASCScreenBrightnessDetectorExample.xcworkspace
-xcode_scheme: ASCScreenBrightnessDetectorExample
+script: xcodebuild -workspace Example/ASCScreenBrightnessDetectorExample.xcworkspace -scheme ASCScreenBrightnessDetectorExample -sdk iphonesimulator test
