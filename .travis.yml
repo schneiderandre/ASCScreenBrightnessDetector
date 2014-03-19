@@ -1,2 +1,3 @@
 language: objective-c
-before_script: 'cd Example'
+before_script:
+  - cd Example
