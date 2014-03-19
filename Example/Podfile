@@ -5,4 +5,5 @@ pod "ASCScreenBrightnessDetector", :path => "../ASCScreenBrightnessDetector.pods
 target "ASCScreenBrightnessDetectorExampleTests" do
 	pod 'Specta'
 	pod 'Expecta'
+	pod 'OCMockito'
 end

@@ -18,9 +18,30 @@ typedef NS_ENUM(NSUInteger, ASCScreenBrightnessStyle) {
 @interface ASCScreenBrightnessDetector : NSObject
 
 /**
+ Initializes and returns a newly allocated ASCScreenBrightnessDetector
+ object with the specified screen.
+
+ @param screen A screen that gets observed for screen brightness changes.
+
+ @return An initialized object.
+ 
+ @warning In most cases you want to observe the brightness changes of the
+          mainscreen, this is the default value if you use the designated
+          initializer "[Class new]" or "[[Class alloc] init]". This method has
+          been added mainly for testing purposes.
+ */
+- (instancetype)initWithScreen:(UIScreen *)screen;
+
+/**
  The object that acts as the delegate.
  */
 @property (nonatomic, weak) id<ASCScreenBrightnessDetectorDelegate> delegate;
+
+/**
+ The Screen that gets observed for screen brightness changes. Per default it
+ returns the application mainscreen.
+ */
+@property (nonatomic, readonly) UIScreen *screen;
 
 /**
  The brightness level of the screen between 0.0 and 1.0, inclusive.

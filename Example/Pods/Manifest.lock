@@ -1,11 +1,15 @@
 PODS:
   - ASCScreenBrightnessDetector (0.1.0)
   - Expecta (0.3.0)
+  - OCHamcrest (3.0.1)
+  - OCMockito (1.1.0):
+    - OCHamcrest (~> 3.0)
   - Specta (0.2.1)
 
 DEPENDENCIES:
   - ASCScreenBrightnessDetector (from `../ASCScreenBrightnessDetector.podspec`)
   - Expecta
+  - OCMockito
   - Specta
 
 EXTERNAL SOURCES:
@@ -15,6 +19,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ASCScreenBrightnessDetector: bc9e056b2960dc755a436a7e885d1e18360cf507
   Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
+  OCHamcrest: 782c52ae8c673e5d6060a65005cfd26d20d519ba
+  OCMockito: 317fa0cf75c9b0d73d2be335789c556537be7fd2
   Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
 
 COCOAPODS: 0.29.0
