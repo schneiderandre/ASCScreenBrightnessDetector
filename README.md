@@ -1,5 +1,6 @@
 # ASCScreenBrightnessDetector
 
+[![Build Status](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector.png?branch=master)](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector)
 [![Version](http://cocoapod-badges.herokuapp.com/v/ASCScreenBrightnessDetector/badge.png)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/ASCScreenBrightnessDetector/badge.png)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
 
