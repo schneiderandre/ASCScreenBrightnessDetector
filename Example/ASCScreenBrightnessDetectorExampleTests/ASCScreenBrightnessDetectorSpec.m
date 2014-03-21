@@ -61,53 +61,103 @@ describe(@"when newly initialized", ^{
     });
 });
 
-
-
-describe(@"when notificationcenter post a brightness did change notification", ^{
+describe(@"when screen brightness did change", ^{
 
     __block UIViewController <ASCScreenBrightnessDetectorDelegate> *mockController;
     __block UIScreen *mockScreen;
     __block ASCScreenBrightnessDetector *sut;
     before(^{
         mockScreen = mock([UIScreen class]);
-        [given([mockScreen brightness]) willReturnFloat:0.4f];
-        sut = [[ASCScreenBrightnessDetector alloc] initWithScreen:mockScreen];
         mockController = mockObjectAndProtocol([UIViewController class],
                                                @protocol(ASCScreenBrightnessDetectorDelegate));
-        sut.delegate = mockController;
     });
 
-    context(@"also below the threshold", ^{
+    context(@"and old brightness is below threshold", ^{
+
         before(^{
-            [given([mockScreen brightness]) willReturnFloat:0.2f];
-            [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
-                                                                object:mockScreen];
+            [given([mockScreen brightness]) willReturnFloat:0.4f];
+            sut = [[ASCScreenBrightnessDetector alloc] initWithScreen:mockScreen];
+            sut.delegate = mockController;
         });
 
-        it(@"should call screen brightness did change on delegate", ^{
-            [MKTVerify(mockController) screenBrightnessDidChange:0.2f];
+        context(@"and new brightness is below threshold", ^{
+
+            before(^{
+                [given([mockScreen brightness]) willReturnFloat:0.2f];
+                [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
+                                                                    object:mockScreen];
+            });
+
+            it(@"should call screen brightness did change on delegate", ^{
+                [MKTVerify(mockController) screenBrightnessDidChange:0.2f];
+            });
+
+            it(@"should not call screen brightness style did change on delegate", ^{
+                [[verifyCount(mockController, never()) withMatcher:anything()] screenBrightnessStyleDidChange:0];
+            });
         });
 
-        it(@"should not call screen brightness style did change on delegate", ^{
-            [[verifyCount(mockController, never()) withMatcher:anything()] screenBrightnessStyleDidChange:0];
+        context(@"and new brightness is above threshold", ^{
+
+            before(^{
+                [given([mockScreen brightness]) willReturnFloat:0.7f];
+                [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
+                                                                    object:mockScreen];
+            });
+
+            it(@"should call screen brightness did change on delegate", ^{
+                [MKTVerify(mockController) screenBrightnessDidChange:0.7f];
+            });
+
+            it(@"should call screen brightness style did change to light on delegate", ^{
+                [MKTVerify(mockController) screenBrightnessStyleDidChange:ASCScreenBrightnessStyleLight];
+            });
         });
     });
 
-    context(@"above the threshold", ^{
+    context(@"and old brightness is above threshold", ^{
+
         before(^{
             [given([mockScreen brightness]) willReturnFloat:0.7f];
-            [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
-                                                                object:mockScreen];
+            sut = [[ASCScreenBrightnessDetector alloc] initWithScreen:mockScreen];
+            sut.delegate = mockController;
         });
 
-        it(@"should call screen brightness did change on delegate", ^{
-            [MKTVerify(mockController) screenBrightnessDidChange:0.7f];
+        context(@"and new brightness is above threshold", ^{
+
+            before(^{
+                [given([mockScreen brightness]) willReturnFloat:0.6f];
+                [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
+                                                                    object:mockScreen];
+            });
+
+            it(@"should call screen brightness did change on delegate", ^{
+                [MKTVerify(mockController) screenBrightnessDidChange:0.6f];
+            });
+
+            it(@"should not call screen brightness style did change on delegate", ^{
+                [[verifyCount(mockController, never()) withMatcher:anything()] screenBrightnessStyleDidChange:0];
+            });
         });
 
-        it(@"should call screen brightness style did change on delegate", ^{
-            [MKTVerify(mockController) screenBrightnessStyleDidChange:ASCScreenBrightnessStyleLight];
+        context(@"and new brightness is below threshold", ^{
+
+            before(^{
+                [given([mockScreen brightness]) willReturnFloat:0.4f];
+                [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
+                                                                    object:mockScreen];
+            });
+
+            it(@"should call screen brightness did change on delegate", ^{
+                [MKTVerify(mockController) screenBrightnessDidChange:0.4f];
+            });
+
+            it(@"should call screen brightness style did change to dark on delegate", ^{
+                [MKTVerify(mockController) screenBrightnessStyleDidChange:ASCScreenBrightnessStyleDark];
+            });
         });
     });
+
 });
 
 SpecEnd
