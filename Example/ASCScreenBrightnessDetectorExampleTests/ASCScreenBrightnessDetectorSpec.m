@@ -43,7 +43,7 @@ describe(@"when newly initialized", ^{
         expect(sut.delegate).to.beNil;
     });
 
-    it(@"should return the connect brightness style", ^{
+    it(@"should return the correct brightness style", ^{
         expect(sut.screenBrightnessStyle).to.equal(ASCScreenBrightnessStyleLight);
     });
 
@@ -51,7 +51,7 @@ describe(@"when newly initialized", ^{
         expect(sut.screen).to.equal(mockScreen);
     });
 
-    it(@"should retrun the correct brightness", ^{
+    it(@"should return the correct brightness", ^{
         expect(sut.screenBrightness).to.equal(0.7f);
     });
 
