@@ -206,4 +206,13 @@ describe(@"when calling screenBrightnessStyle", ^{
     });
 });
 
+describe(@"when changing the threshhold", ^{
+    it(@"should return the correct threshold", ^{
+        ASCScreenBrightnessDetector *sut = [ASCScreenBrightnessDetector new];
+        sut.threshold = 0.2f;
+
+        expect(sut.threshold).to.equal(0.2f);
+    });
+});
+
 SpecEnd
