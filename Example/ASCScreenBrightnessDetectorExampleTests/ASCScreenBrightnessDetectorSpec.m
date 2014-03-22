@@ -160,4 +160,50 @@ describe(@"when screen brightness did change", ^{
 
 });
 
+describe(@"when calling screenBrightness", ^{
+    it(@"should return the correct brightness", ^{
+        UIScreen *mockScreen = mock([UIScreen class]);
+        [given([mockScreen brightness]) willReturnFloat:0.4f];
+        ASCScreenBrightnessDetector *sut = [[ASCScreenBrightnessDetector alloc] initWithScreen:mockScreen];
+
+        expect(sut.screenBrightness).to.equal(0.4f);
+    });
+});
+
+describe(@"when calling screenBrightnessStyle", ^{
+
+    __block UIScreen *mockScreen;
+    __block ASCScreenBrightnessDetector *sut;
+    before(^{
+        mockScreen = mock([UIScreen class]);
+        sut = [[ASCScreenBrightnessDetector alloc] initWithScreen:mockScreen];
+    });
+
+    after(^{
+        mockScreen = nil;
+        sut = nil;
+    });
+
+    it(@"should return a dark style for a brightness below the threshold", ^{
+        [given([mockScreen brightness]) willReturnFloat:0.4f];
+        [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
+                                                            object:mockScreen];
+        expect(sut.screenBrightnessStyle).to.equal(ASCScreenBrightnessStyleDark);
+    });
+
+    it(@"should return a light style for a brightness above the threshold", ^{
+        [given([mockScreen brightness]) willReturnFloat:0.6f];
+        [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
+                                                            object:mockScreen];
+        expect(sut.screenBrightnessStyle).to.equal(ASCScreenBrightnessStyleLight);
+    });
+
+    it(@"should return a dark style for a brightness equal the threshold", ^{
+        [given([mockScreen brightness]) willReturnFloat:0.5f];
+        [[NSNotificationCenter defaultCenter] postNotificationName:UIScreenBrightnessDidChangeNotification
+                                                            object:mockScreen];
+        expect(sut.screenBrightnessStyle).to.equal(ASCScreenBrightnessStyleDark);
+    });
+});
+
 SpecEnd
