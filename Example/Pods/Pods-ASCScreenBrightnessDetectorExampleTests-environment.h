@@ -8,8 +8,8 @@
 
 // ASCScreenBrightnessDetector
 #define COCOAPODS_POD_AVAILABLE_ASCScreenBrightnessDetector
-#define COCOAPODS_VERSION_MAJOR_ASCScreenBrightnessDetector 0
-#define COCOAPODS_VERSION_MINOR_ASCScreenBrightnessDetector 1
+#define COCOAPODS_VERSION_MAJOR_ASCScreenBrightnessDetector 1
+#define COCOAPODS_VERSION_MINOR_ASCScreenBrightnessDetector 0
 #define COCOAPODS_VERSION_PATCH_ASCScreenBrightnessDetector 0
 
 // Expecta
