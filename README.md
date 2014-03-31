@@ -1,8 +1,8 @@
 # ASCScreenBrightnessDetector
 
-[![Build Status](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector.png?branch=master)](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector)
-[![Version](http://cocoapod-badges.herokuapp.com/v/ASCScreenBrightnessDetector/badge.png)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/ASCScreenBrightnessDetector/badge.png)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
+[![Build Status](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector.svg?branch=master)](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector)
+[![Version](http://img.shields.io/cocoapods/v/ASCScreenBrightnessDetector.svg)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
+[![Platform](http://img.shields.io/badge/platform-iOS-blue.svg)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
 
 ASCScreenBrightnessDetector lets you easily detect screen brightness changes and provides some useful delegate methods.
 
