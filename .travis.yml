@@ -1,3 +1,6 @@
 language: objective-c
 before_install: gem install xcpretty -N
-script: xcodebuild -workspace Example/ASCScreenBrightnessDetectorExample.xcworkspace -scheme ASCScreenBrightnessDetectorExample -sdk iphonesimulator test | xcpretty -c
+script:
+- cd Example
+- set -o pipefail
+- xcodebuild -workspace ASCScreenBrightnessDetectorExample.xcworkspace -scheme ASCScreenBrightnessDetectorExample -sdk iphonesimulator test | xcpretty -c
