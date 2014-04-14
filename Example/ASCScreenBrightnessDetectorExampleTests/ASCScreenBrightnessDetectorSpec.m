@@ -55,7 +55,7 @@ describe(@"init", ^{
     });
 });
 
-describe(@"UIScreenBrightnessDidChangeNotification", ^{
+describe(@"brightnessDidChange", ^{
 
     __block UIViewController <ASCScreenBrightnessDetectorDelegate> *mockController;
     __block UIScreen *mockScreen;
@@ -66,7 +66,7 @@ describe(@"UIScreenBrightnessDidChangeNotification", ^{
                                                @protocol(ASCScreenBrightnessDetectorDelegate));
     });
 
-    context(@"old brightness below threshold", ^{
+    context(@"when old brightness below threshold", ^{
 
         before(^{
             [given([mockScreen brightness]) willReturnFloat:0.4f];
@@ -74,7 +74,7 @@ describe(@"UIScreenBrightnessDidChangeNotification", ^{
             sut.delegate = mockController;
         });
 
-        context(@"new brightness below threshold", ^{
+        context(@"and new brightness below threshold", ^{
 
             before(^{
                 [given([mockScreen brightness]) willReturnFloat:0.2f];
@@ -91,7 +91,7 @@ describe(@"UIScreenBrightnessDidChangeNotification", ^{
             });
         });
 
-        context(@"new brightness above threshold", ^{
+        context(@"and new brightness above threshold", ^{
 
             before(^{
                 [given([mockScreen brightness]) willReturnFloat:0.7f];
@@ -109,7 +109,7 @@ describe(@"UIScreenBrightnessDidChangeNotification", ^{
         });
     });
 
-    context(@"old brightness above threshold", ^{
+    context(@"when old brightness above threshold", ^{
 
         before(^{
             [given([mockScreen brightness]) willReturnFloat:0.7f];
@@ -117,7 +117,7 @@ describe(@"UIScreenBrightnessDidChangeNotification", ^{
             sut.delegate = mockController;
         });
 
-        context(@"new brightness above threshold", ^{
+        context(@"and new brightness above threshold", ^{
 
             before(^{
                 [given([mockScreen brightness]) willReturnFloat:0.6f];
@@ -134,7 +134,7 @@ describe(@"UIScreenBrightnessDidChangeNotification", ^{
             });
         });
 
-        context(@"new brightness below threshold", ^{
+        context(@"and new brightness below threshold", ^{
 
             before(^{
                 [given([mockScreen brightness]) willReturnFloat:0.4f];
