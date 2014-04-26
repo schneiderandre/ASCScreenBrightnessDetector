@@ -103,7 +103,7 @@ pod "ASCScreenBrightnessDetector"
  
 ### Manually
 
-Drag the `ASCScreenBrightnessDetector.h` and `ASCScreenBrightnessDetector.m` source files to your project and your are done.
+Drag the `ASCScreenBrightnessDetector.h` and `ASCScreenBrightnessDetector.m` source files to your project and you are done.
 
 ## Author
 
