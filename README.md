@@ -1,8 +1,8 @@
 # ASCScreenBrightnessDetector
 
-[![Build Status](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector.svg?branch=master)](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector)
-[![Version](http://img.shields.io/cocoapods/v/ASCScreenBrightnessDetector.svg)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
-[![Platform](http://img.shields.io/badge/platform-iOS-blue.svg)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
+[![Build Status](http://img.shields.io/travis/schneiderandre/ASCScreenBrightnessDetector.svg?style=flat)](https://travis-ci.org/schneiderandre/ASCScreenBrightnessDetector)
+[![Version](http://img.shields.io/cocoapods/v/ASCScreenBrightnessDetector.svg?style=flat)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
+[![Platform](http://img.shields.io/badge/platform-iOS-blue.svg?style=flat)](http://cocoadocs.org/docsets/ASCScreenBrightnessDetector)
 
 ASCScreenBrightnessDetector lets you easily detect screen brightness changes and provides some useful delegate methods.
 
@@ -100,7 +100,7 @@ it simply add the following line to your Podfile:
 ```ruby
 pod "ASCScreenBrightnessDetector"
 ```
- 
+
 ### Manually
 
 Drag the `ASCScreenBrightnessDetector.h` and `ASCScreenBrightnessDetector.m` source files to your project and you are done.
