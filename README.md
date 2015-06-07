@@ -107,7 +107,7 @@ Drag the `ASCScreenBrightnessDetector.h` and `ASCScreenBrightnessDetector.m` sou
 
 ## Author
 
-André Schneider, [@aschndr](http://twitter.com/aschndr)
+André Schneider, [@_schneiderandre](http://twitter.com/_schneiderandre)
 
 ## License
 
