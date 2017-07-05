@@ -114,4 +114,4 @@ André Schneider, [@_schneiderandre](http://twitter.com/_schneiderandre)
 ASCScreenBrightnessDetector is available under the MIT license. See the LICENSE file for more info.
 
 
-  [1]: https://dl.dropboxusercontent.com/u/19150300/Github/ASCScreenBrightnessDetector/ASCScreenBrightnessDetector.gif
+  [1]: https://d26dzxoao6i3hh.cloudfront.net/items/1u2b163l0b0x1z3N410u/ASCScreenBrightnessDetector.gif
